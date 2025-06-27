@@ -1,0 +1,12 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        //string[] values = Console.ReadLine().Split();
+        string input=Console.ReadLine();
+        double R = double.Parse(input);
+        double π = 3.141592653;
+        double result = π * (R * R);
+        Console.WriteLine(result.ToString("F9"));
+    }

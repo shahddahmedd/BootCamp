@@ -1,0 +1,36 @@
+using System;
+using System.Reflection;
+class Program
+{
+    static void Main()
+    {
+        string[] input = Console.ReadLine().Split();
+        float A = float.Parse(input[0]);
+        float B = float.Parse(input[1]);
+        float result = A / B;   
+        int ceil;
+        if (result == 1)
+        {
+            ceil = 1;
+        }
+        else
+        {
+            float temp = result + 1;  
+            ceil = (int)temp;   
+        }
+        int floor = (int)result;  
+        int round;
+        if (result % 1 >= 0.5)
+        {
+            round = ceil;
+        }
+        else
+        {
+            round = floor;
+        }
+        Console.WriteLine("floor " + A + " / " + B + " = " + floor);
+        Console.WriteLine("ceil " + A + " / " + B + " = " + ceil);
+        Console.WriteLine("round " + A + " / " + B + " = " + round);
+ 
+    }
+}

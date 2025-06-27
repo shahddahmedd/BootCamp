@@ -1,0 +1,19 @@
+using System;
+using System.Reflection;
+class Program
+{
+    static void Main()
+    {
+        string[] firstInput = Console.ReadLine().Split();   //to get the second name of the first line
+        string[] secondInput= Console.ReadLine().Split();   //to get the second name of the second line
+
+        if (firstInput[1].ToLower() == secondInput[1].ToLower())    //conversion of the names to lower case 
+        {
+            Console.WriteLine("ARE Brothers");
+        }
+        else
+        {
+            Console.WriteLine("NOT");
+        }
+    }
+}

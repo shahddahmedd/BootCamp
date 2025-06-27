@@ -1,0 +1,28 @@
+using System;
+using System.Reflection;
+class Program
+{
+    static void Main()
+    {
+
+        string input = Console.ReadLine();
+        char S = char.Parse(input);
+        byte ascii = (byte)S;
+        if (ascii>=48&&ascii<=57)                   //checking if it is a digit
+        {
+            Console.WriteLine("IS DIGIT");
+        }
+        else if(ascii >= 65 && ascii <= 90)        //checking if it is an uppercase letter
+        {
+            Console.WriteLine("ALPHA");
+            Console.WriteLine("IS CAPITAL");
+
+        } 
+        else if (ascii >= 97 && ascii <= 122)      //checking if it is a lowercase letter
+        {
+            Console.WriteLine("ALPHA");
+            Console.WriteLine("IS SMALL");
+
+        }
+    }
+}

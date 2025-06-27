@@ -1,0 +1,17 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string[] values = Console.ReadLine().Split();
+        long A = long.Parse(values[0]);
+        long B = long.Parse(values[1]);
+        long C = long.Parse(values[2]);
+        long D = long.Parse(values[3]);
+        long X = (A * B) - (C * D);
+        Console.WriteLine("Difference = " + X);
+ 
+ 
+ 
+    }
+}

@@ -1,0 +1,17 @@
+using System;
+using System.Reflection;
+class Program
+{
+    static void Main()
+    {
+        string [] input=Console.ReadLine().Split();
+        
+        int index1 = (input[0]).Length-1;        //getting the index of the last digit of the first number 
+        char lastChar1 = input[0][index1];      //exctraction of the last digit of the first number
+        int index2 = (input[1]).Length - 1;    //getting the index of the last digit of the second number 
+        char lastChar2 = input[1][index2];    // exctraction of the last digit of the second number
+        int N = int.Parse(lastChar1.ToString());
+        int M = int.Parse(lastChar2.ToString());
+        Console.WriteLine(N + M);
+    }
+}

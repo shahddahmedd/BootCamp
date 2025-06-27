@@ -1,0 +1,15 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        string[] values = Console.ReadLine().Split();
+        long X = long.Parse(values[0]);
+        long Y = long.Parse(values[1]);
+        Console.WriteLine(X + " + " + Y + " = " + (X + Y));
+        Console.WriteLine(X + " * " + Y + " = " + (X * Y));
+        Console.WriteLine(X + " - " + Y + " = " + (X - Y));
+ 
+ 
+    }
+}
