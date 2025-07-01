@@ -1,0 +1,39 @@
+using System;
+class Program
+{
+    static void Main() {
+        string[] input = Console.ReadLine().Split();
+        float X = float.Parse(input[0]);
+        float Y = float.Parse(input[1]);
+
+        if (X == 0 && Y == 0)         //origin
+        {
+            Console.WriteLine("Origem");
+        }
+        else if (X == 0)           //on Y-axis
+        {
+            Console.WriteLine("Eixo Y");
+        }
+        else if (Y == 0)           //on X-axis
+        {
+            Console.WriteLine("Eixo X");
+        }
+        else if (X > 0 && Y > 0)     //at the first quad
+        {
+            Console.WriteLine("Q1");
+        }
+        else if (X<0 && Y < 0)      //at the third quad
+        {
+            Console.WriteLine("Q3"); 
+        }
+        else if (X < 0 && Y > 0)   //at the second quad
+        {
+            Console.WriteLine("Q2");
+        }
+        else if (X > 0 && Y < 0)   //at the fourth quad
+        {
+            Console.WriteLine("Q4");
+        }
+
+    }
+}

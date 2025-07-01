@@ -1,0 +1,21 @@
+using System;
+using System.ComponentModel.Design;
+using System.Reflection;
+using System.Collections.Generic;
+class Program
+{
+    static void Main()
+    {
+        string input = Console.ReadLine();
+        int value = int.Parse(input);
+        int years = value / 365;    
+        int temp = value - (years * 365); 
+        int months = temp / 30;
+        int days = temp - (months * 30);
+
+       Console.WriteLine(years+" years");
+        Console.WriteLine(months + " months");
+        Console.WriteLine(days + " days");
+
+    }
+}

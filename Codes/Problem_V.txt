@@ -1,0 +1,45 @@
+using System;
+using System.Reflection;
+class Program
+{
+    static void Main()
+    {
+        string[] input = Console.ReadLine().Split();
+        int A = int.Parse(input[0]);
+        Char S = char.Parse(input[1]);
+        int B = int.Parse(input[2]);
+        if (S == '>')
+        {
+            if (A > B)
+            {
+                Console.WriteLine("Right");
+            }
+            else
+            {
+                Console.WriteLine("Wrong");
+            }
+        }
+        else if (S == '<')
+        {
+            if (A < B)
+            {
+                Console.WriteLine("Right");
+            }
+            else
+            {
+                Console.WriteLine("Wrong");
+            }
+        }
+        else
+        {
+            if (A == B)
+            {
+                Console.WriteLine("Right");
+            }
+            else
+            {
+                Console.WriteLine("Wrong");
+            }
+        }
+    }
+}

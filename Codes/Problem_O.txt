@@ -1,0 +1,42 @@
+using System;
+class Program
+{  
+    static void Main() {
+        string input = Console.ReadLine();
+        char temp;                                           // to store the symbol
+        int i = 0;
+        byte ascii;
+        while (true)                                         //loop till reach the symbol
+        {
+             ascii = (byte) input[i];
+            if (!(ascii >= 48 && ascii <= 57)) // if not a digit
+            {
+                temp = (char)ascii;           //store the symbol and break the loop
+                break;
+            }
+            i++;
+        }
+        string[] numbers = input.Split(temp);        //split by the symbol in an array of strings 
+        int A = int.Parse(numbers[0]);               //type cast the 2 strings to integer
+        int B = int.Parse(numbers[1]);
+
+        //to check for the symbol S
+
+        if (temp == '+')         
+        {
+          Console.WriteLine(A + B);
+        }
+        else if (temp == '-')
+        {
+            Console.WriteLine(A - B);
+        }
+        else if (temp == '*')
+        {
+            Console.WriteLine(A * B);
+        }
+        else if (temp == '/')
+        {
+            Console.WriteLine(A / B);
+        }
+    }
+}

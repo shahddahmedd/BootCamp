@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+    static void Main() {
+        string [] input = Console.ReadLine().Split(".");   // separate the int part from the decimal part
+        int X = int.Parse(input[0]);
+        int Y = int.Parse(input[1]);
+        bool flag = true;
+        for (int i = 0; i < input[1].Length; i++)        //to check if all the decimal part are zeroes
+        {
+            if (input[1][i] != '0')
+            {
+                flag = false;
+                break;
+            }
+        }
+        if (flag)
+        {
+            Console.WriteLine("int "+X);
+        }
+        else
+        {
+            Console.WriteLine("float " +X+" "+"0."+Y);
+        }
+    }
+}

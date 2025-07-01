@@ -1,0 +1,18 @@
+using System;
+class Program
+{  
+    static void Main() {
+        string input = Console.ReadLine();
+        byte ascii = (byte)input[0];       // conversion of the first number to ascii
+        char temp = (char)ascii;           
+        int firstDigit = (int)temp;
+        if (firstDigit % 2 == 0)         //to check for even or odd
+        {
+            Console.WriteLine("EVEN");
+        }
+        else
+        {
+            Console.WriteLine("ODD");
+        }
+    }
+}

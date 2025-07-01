@@ -1,0 +1,51 @@
+using System;
+using System.Reflection;
+class Program
+{
+    static void Main()
+    {
+        string[] input = Console.ReadLine().Split();   //A+B=C
+        int A = int.Parse(input[0]);
+        char S = char.Parse(input[1]);
+        int B = int.Parse(input[2]);
+        char equal = Char.Parse(input[3]);
+        int C = int.Parse(input[4]);
+        int result;
+        if (S == '+')
+        {
+            result = A + B;
+            if (result == C)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine(result);
+            }
+        }
+        else if (S == '-')
+        {
+            result = A - B;
+            if (result == C)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine(result);
+            }
+        }
+        else if (S=='*')
+        {
+            result = A * B;
+            if (result==C)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine(result);
+            }
+        }
+    }
+}

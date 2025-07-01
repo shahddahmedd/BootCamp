@@ -1,0 +1,28 @@
+using System;
+using System.ComponentModel.Design;
+using System.Reflection;
+using System.Collections.Generic;
+class Program
+{
+    static void Main()
+    {
+        string[] input = Console.ReadLine().Split();
+        List<long> values = new List<long>(new long[4]);
+        long a = long.Parse(input[0]);
+        long b = long.Parse(input[1]);
+        long c = long.Parse(input[2]);
+        long d = long.Parse(input[3]);
+        long start = Math.Max(a,c);
+        long end = Math.Min(b, d);
+        if (start <= end)
+        {
+            Console.WriteLine(start+" "+end);
+        }
+        else
+        {
+            Console.WriteLine("-1");
+        }
+           
+
+    }
+}
