@@ -1,0 +1,24 @@
+using System;
+using System.ComponentModel.Design;
+using System.Reflection;
+using System.Collections.Generic;
+class Program
+{
+    static void Main()
+    {
+        string input = Console.ReadLine();
+        int number = int.Parse(input);
+        if (number == 1)
+        {
+            Console.WriteLine(-1);
+        }
+        else
+        {
+            for (int i = 2; i <= number; i += 2)
+            {
+                Console.WriteLine(i);
+            }
+        }
+            
+    }
+}

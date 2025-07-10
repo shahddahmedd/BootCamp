@@ -1,0 +1,25 @@
+using System;
+using System.ComponentModel.Design;
+using System.Reflection;
+using System.Collections.Generic;
+using System.Globalization;
+class Program
+{
+    static void Main()
+    {
+        string firstInput = Console.ReadLine();
+        int count=int.Parse(firstInput);
+        string[] secondInput = Console.ReadLine().Split();
+        int[] integerValues = Array.ConvertAll(secondInput, int.Parse);
+        int max = integerValues[0];
+        for (int i = 0; i < count; i++)
+        {
+            if (integerValues[i] > max)
+            {
+                max = integerValues[i];
+            }
+        }
+        Console.WriteLine(max);
+ 
+    }
+}
