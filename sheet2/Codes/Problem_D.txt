@@ -1,0 +1,42 @@
+using System;
+using System.ComponentModel.Design;
+using System.Reflection;
+using System.Collections.Generic;
+using System.Globalization;
+class Program
+{
+    static void Main()
+    {
+        string input;
+        int number;
+        List<int> inputs = new List<int>();
+       
+        while (true)
+        {
+            input = Console.ReadLine();
+            number= int.Parse(input);
+            inputs.Add(number);
+ 
+            if (number == 1999)
+            {
+                break;
+            }
+        }
+        int i = 0;
+        while (true)
+        {
+            if (inputs[i] == 1999)
+            {
+                Console.WriteLine("Correct");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Wrong");
+            }
+            i++;
+                
+        }
+ 
+    }
+}

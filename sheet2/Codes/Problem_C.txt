@@ -1,0 +1,45 @@
+using System;
+using System.ComponentModel.Design;
+using System.Reflection;
+using System.Collections.Generic;
+class Program
+{
+    static void Main()
+    {
+        string firstInput = Console.ReadLine();
+        string []secondInput= Console.ReadLine().Split();
+        int count = int.Parse(firstInput);
+        int[] values = Array.ConvertAll(secondInput, int.Parse);
+        int evenCount = 0;
+        int oddCount = 0;
+        int positiveCount = 0;
+        int negativeCount = 0;
+ 
+ 
+        for (int i = 0; i < count;i++)
+        {
+            if (values[i] % 2 == 0)
+            {
+                evenCount++;
+            }
+            else
+            {
+                oddCount++;
+            }
+            if (values[i]>0)
+            {
+                positiveCount++;
+            }
+            else if (values[i] < 0)
+            {
+                negativeCount++;
+            }
+        }
+        Console.WriteLine("Even: " + evenCount);
+        Console.WriteLine("Odd: " + oddCount);
+        Console.WriteLine("Positive: " + positiveCount);
+        Console.WriteLine("Negative: " + negativeCount);
+ 
+ 
+    }
+}
